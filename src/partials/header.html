@@ -1,11 +1,21 @@
 <header>
   <section class="header-section">
     <div class="dark-gradient-mobile"></div>
-    <img
-      class="hero-image"
-      src="./images/filmoteka-main-image.jpg"
-      alt="Movie popcorn, 3D glasses and camera"
-    />
+
+    <picture>
+      <!-- Versiunea pentru retina (2x) -->
+      <source
+        srcset="./images/filmoteka-main-image@2x.jpg"
+        media="(min-resolution: 192dpi)"
+      />
+      <!-- Fallback pentru ecrane obișnuite -->
+      <img
+        class="hero-image"
+        src="./images/filmoteka-main-image.jpg"
+        alt="Movie popcorn, 3D glasses and camera"
+      />
+    </picture>
+
     <div class="logo-container">
       <div class="logo-alignment">
         <img class="logo-icon" src="./images/film-icon.svg" alt="Film icon" />
