@@ -1,0 +1,34 @@
+/* Fixed button */
+.fixedbutton {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+  width: 60px;
+}
+
+.fixedbutton img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.fixedbutton:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.fixedbutton:focus {
+  transform: scale(1.3);
+}
+
+/* Media query pentru dispozitive cu ecrane Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Modifică dimensiunea imaginii pentru ecranele Retina */
+  .fixedbutton img {
+    width: 60px; /* Dimensiunea pentru Retina */
+    /* Alte stiluri pentru dimensiunile Retina ale imaginii */
+  }
+}

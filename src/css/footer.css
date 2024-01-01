@@ -1,0 +1,408 @@
+/* FOOTER css*/
+
+.footer {
+  background: #f7f7f7;
+  margin-top: auto;
+}
+
+.footer-body-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-font-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  gap: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+}
+
+.footer-font-size {
+  color: #545454;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-color-font {
+  color: #b92f2c;
+  text-decoration: none;
+}
+
+.footer-heart-icon-custom {
+  width: 14px;
+  height: 14px;
+  fill: #b92f2c;
+}
+
+/* modal section */
+
+.footer-modal {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-modal-content {
+  padding: 16px 6px;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 95%;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  align-content: center;
+}
+
+.footer-modal:hover {
+  background: #00000033;
+  opacity: 0.95;
+}
+
+.footer-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  fill: #b92f2c;
+  background-color: #fff;
+  padding: 2px 4px;
+  border-radius: 12px;
+  width: clamp(1.08rem, 0.7075rem + 1.8625vw, 2.1975rem);
+  height: clamp(1.08rem, 0.7075rem + 1.8625vw, 2.1975rem);
+}
+
+.footer-modal-close:hover {
+  cursor: pointer;
+  border: 2px solid #b92f2c;
+  background: transparent;
+}
+
+.footer-close-icon {
+  width: clamp(0.4338rem, 0.3383rem + 0.4771vw, 0.72rem);
+  height: clamp(0.4338rem, 0.3383rem + 0.4771vw, 0.72rem);
+}
+
+.footer-close-icon:hover {
+  fill: #b92f2c;
+}
+
+.footer-font-title {
+  margin-top: 2px;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(12px, 14px, 20px);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
+}
+
+.footer-content {
+  height: auto;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.footer-cards {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-team-card {
+  border: 2px solid #b92f2c;
+  width: 95%;
+  height: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  padding: 0;
+  box-shadow: 5px 5px 14px -3px rgba(185, 47, 44, 0.67);
+  -webkit-box-shadow: 5px 5px 14px -3px rgba(185, 47, 44, 0.67);
+  -moz-box-shadow: 5px 5px 14px -3px rgba(185, 47, 44, 0.67);
+}
+
+.card-team {
+  border: 2px solid;
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-icon:hover {
+  background: #b92f2c;
+  cursor: pointer;
+}
+
+.footer-image-container {
+  border-radius: 20px;
+  margin: 10px auto 10px 10px;
+}
+
+.footer-img-size {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #b92f2c;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-member-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  align-items: start;
+}
+
+.footer-team-name {
+  color: #000;
+  text-align: center;
+  font-size: clamp(0.625rem, 0.4583rem + 0.8333vw, 1.125rem);
+  line-height: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  font-family: 'Roboto';
+}
+
+.footer-team-function {
+  color: #757575;
+  text-align: center;
+  font-size: clamp(0.4338rem, 0.3383rem + 0.4771vw, 0.72rem);
+  line-height: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  letter-spacing: 0.48px;
+  font-family: 'Roboto';
+}
+
+.footer-icon-cards {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 2px solid #b92f2c;
+  padding: 14px;
+  display: flex;
+  gap: 6px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.footer-linkedin-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  background-image: url(../images/icons/linkedin.svg);
+}
+
+.footer-github-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  background-image: url(../images/icons/github.svg);
+}
+
+.footer-linkedin-icon:hover,
+.footer-github-icon:hover {
+  filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
+}
+
+.footer-dark-mode {
+  background-color: #2f303a;
+  color: #fff;
+}
+
+.footer-modal-cover {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000033;
+}
+
+.footer-modal-cover:hover {
+  cursor: pointer;
+}
+
+.footer-is-hidden {
+  display: none;
+}
+
+
+/* modal tablet */
+
+@media screen and (min-width: 768px) {
+  .footer-modal-close {
+    width: clamp(1.2963rem, 0.8127rem + 2.4177vw, 2.7469rem);
+    height: clamp(1.2963rem, 0.8127rem + 2.4177vw, 2.7469rem);
+  }
+
+  .footer-close-icon {
+    width: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
+    height: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
+  }
+
+  .footer-team-card {
+    min-width: 250px;
+    gap: 8px;
+  }
+
+  .footer-font-flex {
+    flex-direction: row;
+    gap: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+  }
+
+  .footer-font-size {
+    font-size: clamp(0.9rem, 0.614rem + 1.4302vw, 1.7581rem);
+  }
+
+  .footer-modal-content {
+    padding: 18px 8px;
+    width: 55%;
+  }
+
+  .footer-font-title {
+    font-size: clamp(0.625rem, 0.4583rem + 0.8333vw, 1.125rem);
+    line-height: calc(clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem) + 3px);
+  }
+
+  .footer-team-name {
+    font-size: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+    line-height: clamp(0.9rem, 0.614rem + 1.4302vw, 1.7581rem);
+  }
+
+  .footer-team-function {
+    font-size: clamp(0.625rem, 0.4583rem + 0.8333vw, 1.125rem);
+    line-height: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+  }
+
+.footer-cards {
+  gap: 8px;
+}
+
+  .footer-member-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-icon-cards {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-img-size {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+
+/* modal desktop */
+
+@media screen and (min-width: 1280px) {
+  .footer-modal-close {
+    width: clamp(1.2963rem, 0.8127rem + 2.4177vw, 2.7469rem);
+    height: clamp(1.2963rem, 0.8127rem + 2.4177vw, 2.7469rem);
+  }
+
+  .footer-body-content {
+    flex-direction: row;
+  }
+
+  .footer-cards {
+    gap: 10px;
+  }
+
+  .footer-font-size {
+    font-size: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+  }
+
+  .footer-font-title {
+    font-size: clamp(0.625rem, 0.4583rem + 0.8333vw, 1.125rem);
+    line-height: calc((clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem)) + 3px);
+  }
+
+  .footer-modal-content {
+    padding: 20px 10px;
+    width: 50%;
+  }
+
+  .footer-team-name {
+    font-size: clamp(0.9rem, 0.614rem + 1.4302vw, 1.7581rem);
+    line-height: clamp(1.08rem, 0.7075rem + 1.8625vw, 2.1975rem);
+  }
+
+  .footer-team-function {
+    font-size: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
+    line-height: clamp(0.9rem, 0.614rem + 1.4302vw, 1.7581rem);
+  }
+
+  .footer-team-card {
+    min-width: 270px;
+    gap: 10px;
+  }
+
+  .footer-member-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-icon-cards {
+    flex-direction: row;
+  }
+
+  .footer-img-size {
+    width: 80px;
+    width: 80px;
+  }
+}

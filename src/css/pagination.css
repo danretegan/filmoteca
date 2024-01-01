@@ -1,0 +1,41 @@
+/* Pagination */
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Stilizare pentru butoanele de paginare */
+.pagination button {
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  float: left;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: none; 
+  cursor: pointer; 
+  margin: 0 4px; /* adaugă margini între butoane */
+  background: transparent; 
+}
+
+/* Stilizare pentru butoanele active din paginare */
+.pagination button.active {
+  background-color: #b92f2c;
+  color: white;
+  border: 1px solid #b92f2c;
+  border-radius: 5px;
+}
+
+/* Stilizare pentru hover pe butoanele din paginare care nu sunt active */
+.pagination button:not(.active):hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}

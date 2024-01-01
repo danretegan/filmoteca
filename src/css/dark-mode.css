@@ -1,0 +1,99 @@
+body.dark-mode {
+  background-color: #111; /* Set your dark mode background color */
+}
+
+body.dark-mode .movie-title {
+  color: #dddddd;
+}
+
+body.dark-mode .movie-title {
+  color: #dddddd;
+}
+
+body.dark-mode .footer {
+  background: #1b1a1a;
+}
+
+body.dark-mode .footer-font-size {
+  color: #dddddd;
+}
+
+body.dark-mode .footer-heart-icon-custom {
+  /* filter: invert(1); */
+  filter: invert(0.3) sepia(100%) saturate(3500%) hue-rotate(0);
+}
+
+body.dark-mode .footer-color-font {
+  color: #e4402a;
+}
+
+body.dark-mode .pagination button {
+  color: #dddddd;
+}
+
+.dark-mode .modal-movie-card {
+  background-color: #1b1a1a;
+}
+
+.dark-mode .modal-movie-overview {
+  color: #dddddd;
+}
+
+.dark-mode .modal-movie-tille {
+  color: #dddddd;
+}
+
+.dark-mode .btn-w {
+  border: 1px solid #dddddd;
+}
+
+.dark-mode .btn-q {
+  border: 1px solid #dddddd;
+}
+
+.dark-mode .add-watched-btn {
+  color: #dddddd;
+}
+
+.dark-mode .add-queue-btn {
+  color: #dddddd;
+}
+.dark-mode .modal-movie-card-close {
+  color: #dddddd;
+}
+.dark-mode .footer-team-name {
+  color: #dddddd;
+}
+.dark-mode .footer-font-title {
+  color: #dddddd;
+}
+.dark-mode .footer-close-icon {
+  filter: invert(1);
+}
+.dark-mode .footer-team-function {
+  color: #b4b4b4;
+}
+.dark-mode .movie-container p {
+  color: #b92f2c;
+}
+.dark-mode .footer-modal-content {
+  background-color: #1b1a1a;
+}
+.dark-mode .footer-modal-close {
+  background-color: #1b1a1a;
+}
+
+.dark-mode .footer-linkedin-icon,
+.dark-mode .footer-github-icon {
+  filter: invert(1);
+}
+
+.dark-mode .footer-linkedin-icon:hover,
+.dark-mode .footer-github-icon:hover {
+  filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
+}
+
+.dark-mode .pagination button:not(.active):hover {
+  color: #1b1a1a;
+  border-radius: 5px;
+}

@@ -1,0 +1,105 @@
+.resultContainer {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+  }
+
+
+/* Stilurile pentru card */
+.movie-card-search {
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+  
+.movie-card-search .movie-title {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+  }
+  
+  /* Stilurile pentru descriere */
+  .movie-card-search .movie-info {
+    color: #b92f2c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin: 0;
+  }
+  
+  /* Stilurile pentru imaginea din card */
+  .movie-card-search .movie-image {
+    border-radius: 20px; /* Adaugă raza la colțurile imaginii pentru a se potrivi cu cardul */
+    cursor: pointer;
+    height: auto; /* Asigură că imaginea ocupă întreaga înălțime a cardului */
+    object-fit: cover; /* Redimensionează imaginea astfel încât să acopere întregul container, păstrând proporțiile */
+    width: 100%; /* Asigură că imaginea ocupă întreaga lățime a cardului */
+    /* height: 433.5px; */
+    box-shadow: 0 4px 8px 0 rgba(185, 47, 44, 0.2),
+      0 6px 20px 0 rgba(185, 47, 44, 0.19);
+    transition: transform 0.3s ease;
+  }
+  .movie-card-search .movie-image:hover,
+  .movie-card-search .movie-image:focus {
+    transform: scale(1.03);
+  }
+  
+
+
+
+
+
+@media screen and (min-width: 376px) {
+    .resultContainer {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px;
+    }
+  
+    .movie-card-search {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .resultContainer {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px;
+    }
+  
+    .movie-card-search {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      width: calc(33% - 14px);
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .resultContainer {
+      gap: 20px;
+      margin: 20px auto;
+      width: 1216px;
+      min-height: 500px;
+    }
+    .movie-card-search {
+      width: calc(25% - 15px);
+    }
+  }
