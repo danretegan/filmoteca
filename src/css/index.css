@@ -1,11 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-@import './search-movies.css';
+@import './header.css';
+@import './loader.css';
 @import './gallery.css';
 @import './scroll-button.css';
-@import './modal.css';
-@import './my-library.css';
-@import './footer.css';
-@import './loader.css';
-@import './header.css';
-@import './dark-mode.css';
 @import './pagination.css';
+@import './search-movies.css';
+@import './modal.css';
+@import './dark-mode.css';
+@import './footer.css';
