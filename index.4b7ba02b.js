@@ -1,2 +1,0 @@
-const e=document.getElementsByClassName("btn1_container")[0],t=document.querySelector(".fas");function o(o){t.classList.toggle("fa-circle",!o),t.classList.toggle("fa-moon",o),t.classList.toggle("active1",o),e.classList.toggle("changeBg",o),document.body.classList.toggle("dark-mode",o),localStorage.setItem("darkMode",o)}function s(){return"true"===localStorage.getItem("darkMode")}o(s()),e.addEventListener("click",(()=>{o(!s())}));
-//# sourceMappingURL=index.4b7ba02b.js.map

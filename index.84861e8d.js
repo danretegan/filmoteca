@@ -1,0 +1,2 @@
+var btn1_ctn=document.getElementsByClassName("btn1_container")[0],one=document.querySelector(".fas");function setDarkMode(e){one.classList.toggle("fa-circle",!e),one.classList.toggle("fa-moon",e),one.classList.toggle("active1",e),btn1_ctn.classList.toggle("changeBg",e),document.body.classList.toggle("dark-mode",e),localStorage.setItem("darkMode",e)}function getDarkMode(){return"true"===localStorage.getItem("darkMode")}setDarkMode(getDarkMode()),btn1_ctn.addEventListener("click",(function(){setDarkMode(!getDarkMode())}));
+//# sourceMappingURL=index.84861e8d.js.map
