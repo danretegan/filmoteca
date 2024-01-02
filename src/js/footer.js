@@ -1,7 +1,4 @@
-// fOOTER.JS
-
-document.querySelector('.footer-currentYear').textContent =
-  new Date().getFullYear();
+// footer.js
 
 (() => {
   const footerRefs = {
