@@ -2,9 +2,9 @@
 @import './header.css';
 @import './loader.css';
 @import './gallery.css';
-@import './scroll-button.css';
 @import './pagination.css';
-@import './search-movies.css';
+@import './scroll-button.css';
 @import './modal.css';
+@import './search-movies.css';
 @import './dark-mode.css';
 @import './footer.css';
