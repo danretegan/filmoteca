@@ -1,0 +1,2 @@
+var mybutton=document.getElementById("btn-back-to-top");function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?mybutton.style.display="block":mybutton.style.display="none"}function backToTop(){window.scrollTo({top:0,behavior:"smooth"})}mybutton.style.display="none",window.onscroll=function(){scrollFunction()},mybutton.addEventListener("click",backToTop);
+//# sourceMappingURL=index.c665418d.js.map
