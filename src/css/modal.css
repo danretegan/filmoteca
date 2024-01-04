@@ -241,6 +241,7 @@
     place-content: flex-start flex-end;
     align-items: flex-start;
     display: flex;
+    gap: 40px;
   }
 
   .modal-movie-poster {
@@ -264,6 +265,7 @@
     font-size: 12px;
     line-height: 20px;
     height: auto;
+    text-align: justify;
   }
 
   .btn-q-w {
