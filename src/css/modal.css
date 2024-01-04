@@ -1,3 +1,8 @@
+.modal {
+  width: 280px;
+  height: 930px;
+}
+
 .modal-movie-card {
   display: flex;
   flex-direction: column;
@@ -6,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 51;
   transition: opacity 0.3s ease-in-out;
@@ -17,11 +22,6 @@
   height: 76vh;
   flex-shrink: 0;
   overflow-y: scroll;
-}
-
-.modal {
-  width: 280px;
-  height: 930px;
 }
 
 .modal-movie-card .flex {
@@ -74,7 +74,7 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .modal-movie-poster {
   width: 240px;
@@ -82,7 +82,7 @@
   flex-shrink: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .overlay {
   position: fixed;
