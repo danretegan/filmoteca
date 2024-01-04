@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   gap: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
 }
 
@@ -209,7 +208,6 @@
 .footer-icon-cards {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
   align-items: center;
   align-content: center;
   justify-content: center;

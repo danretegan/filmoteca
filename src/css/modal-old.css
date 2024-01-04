@@ -1,19 +1,33 @@
+.modal {
+  width: 280px;
+  height: 930px;
+}
+
 .modal-movie-card {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  width: 87vw;
-  left: 50%;
-  top: 50%;
-  overflow-y: scroll;
-  padding: 40px 20px;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out;
   z-index: 51;
+  transition: opacity 0.3s ease-in-out;
+  margin: 0px auto;
+  padding: 0px 20px;
+  width: 87vw;
+  /* height: 98vh; */
+  height: 76vh;
+  flex-shrink: 0;
+  overflow-y: scroll;
+}
+
+.modal-movie-card .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn-open {
@@ -36,16 +50,19 @@
 }
 
 .modal-content-details {
+  /* line-height: 12px; */
   line-height: 16px;
 }
 
 .right-side-content {
   color: #f57676;
+  /* text-align: -webkit-left; */
   font-family: 'Roboto';
   font-size: 78%;
   font-weight: 500;
+  margin: 0px auto;
   text-align: justify;
-  width: 100%;
+  width: 240px;
 }
 .left-side-content {
   height: auto;
@@ -63,11 +80,12 @@
 .modal-movie-poster {
   width: 240px;
   height: 340px;
+  flex-shrink: 0;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
   width: 100%;
-  /* margin-top: 40px; */
+  margin-top: 40px;
 }
 .overlay {
   position: fixed;
@@ -99,13 +117,15 @@
   flex: 1;
   place-content: normal;
   align-items: center;
+  /* margin: 0 auto; */
   display: flex;
   width: 100%;
 }
 
 .modal-movie-overview {
-  /* width: 240px; */
+  width: 240px;
   color: #000;
+  flex-shrink: 0;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 500;
@@ -124,7 +144,6 @@
   text-transform: uppercase;
   border-radius: 5px;
   transition: 0.25s;
-  justify-content: center;
 }
 .btn-q {
   text-transform: uppercase;
@@ -217,23 +236,29 @@
   background: none;
   border: none;
   position: absolute;
+  /* left: 227px; */
+  /* top: -9px; */
+  /* top: 0px; */
   width: 30px;
   height: 30px;
 
-  top: 5px; /* Ajustează poziția butonului în colțul din dreapta sus */
-  right: 5px; /* Ajustează poziția butonului în colțul din dreapta sus */
+  top: 10px; /* Ajustează poziția butonului în colțul din dreapta sus */
+  right: 10px; /* Ajustează poziția butonului în colțul din dreapta sus */
   left: auto; /* Asigură că butonul este poziționat la dreapta */
 }
 
-/* Tablet */
-
 @media screen and (min-width: 768px) {
+  .modal-movie-poster {
+    width: 264px;
+    height: 373.551px;
+  }
+
   .modal-movie-card {
     width: 704px;
     max-height: 90vh;
     overflow: hidden;
     height: fit-content;
-    padding: 40px;
+    padding: 24px;
   }
 
   .modal-content {
@@ -242,22 +267,9 @@
     align-items: flex-start;
     display: flex;
   }
-
-  .modal-movie-poster {
-    width: 264px;
-    height: 373.551px;
-  }
-
-  .left-side-content {
-    /* margin-bottom: 25px; */
-    /* width: 475px; */
-    /* margin: 0; */
-    align-items: flex-start;
-  }
-
   .modal-movie-card-close {
-    /* top: -22px; */
-    right: 5px;
+    top: -22px;
+    left: 647px;
   }
   .modal-movie-overview {
     /* width: 264px; */
@@ -266,6 +278,10 @@
     height: auto;
   }
 
+  .left-side-content {
+    margin-bottom: 25px;
+    width: 475px;
+  }
   .btn-q-w {
     gap: 8px;
   }
@@ -281,21 +297,20 @@
   }
 }
 
-/* Desktop */
-
 @media screen and (min-width: 1280px) {
-  .modal {
-    width: 806px;
-    height: 558px;
-  }
-
   .modal-movie-card {
     top: 50%;
     left: 50%;
-    padding: 40px;
+    padding: 13px 12px;
     width: 100%;
     max-width: 806px;
     max-height: max-content;
+  }
+
+  .modal {
+    width: 806px;
+    height: 558px;
+    flex-shrink: 0;
   }
 
   .modal-movie-tille {
@@ -359,7 +374,7 @@
   }
 
   .modal-movie-card-close {
-    top: 5px;
-    right: 5px;
+    top: -10px;
+    left: 756px;
   }
 }
