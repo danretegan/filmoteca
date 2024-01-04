@@ -1,2 +1,11 @@
-
-    <div class="loader-container"><img class="loader-img" src="./images/loader-img.png" alt=""></div>
+<div class="loader-container">
+  <picture>
+    <!-- Versiunea pentru retina (2x) -->
+    <source
+      srcset="./images/loader-img@2x.png"
+      media="(min-resolution: 192dpi)"
+    />
+    <!-- Fallback pentru ecrane obișnuite -->
+    <img class="loader-img" src="./images/loader-img.png" alt="" />
+  </picture>
+</div>
