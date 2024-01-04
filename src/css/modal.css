@@ -238,7 +238,7 @@
 
   .modal-content {
     flex-direction: row;
-    place-content: flex-start flex-end;
+    /* place-content: flex-start flex-end; */
     align-items: flex-start;
     display: flex;
     gap: 40px;
@@ -312,10 +312,10 @@
 
   .right-side-content {
     text-align: -webkit-left;
-    width: 391px;
+    width: fit-content;
   }
   .left-side-content {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     /* width: 475px; */
   }
 
@@ -323,11 +323,11 @@
 
   .modal-content {
     flex-direction: row;
-    gap: 16px;
+    gap: 40px;
   }
 
   .modal-movie-overview {
-    width: 391px;
+    width: auto;
     font-size: 12px;
     line-height: 20px;
   }
