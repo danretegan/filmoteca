@@ -300,8 +300,7 @@ header {
 .btn-52:after,
 .btn-52:before {
   border: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+ 
 }
 .btn-52 {
   /* -webkit-tap-highlight-color: transparent;
@@ -334,8 +333,7 @@ header {
 .btn-52 {
   /* border: 1px solid; */
   border-radius: 999px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  
   display: block;
   font-weight: 900;
   overflow: hidden;
@@ -412,8 +410,7 @@ header {
 .btn-53:after,
 .btn-53:before {
   border: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+ 
 }
 .btn-53 {
   /* -webkit-tap-highlight-color: transparent;
@@ -446,8 +443,7 @@ header {
 .btn-53 {
   /* border: 1px solid; */
   border-radius: 999px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  
   display: block;
   font-weight: 900;
   overflow: hidden;

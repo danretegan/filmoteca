@@ -12,8 +12,7 @@
 /* Stilurile pentru card */
 .movie-card-search {
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
   height: auto;
   margin: 0 auto;
   padding-left: 20px;

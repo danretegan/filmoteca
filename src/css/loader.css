@@ -21,15 +21,14 @@
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
   -webkit-animation: rotation 1s linear infinite;
   animation: rotation 1s linear infinite;
   scale: 2;
 }
 /* .loader::after {
   content: '';  
-  box-sizing: border-box;
+ 
   position: absolute;
   left: 6px;
   top: 10px;
