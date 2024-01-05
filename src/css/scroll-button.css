@@ -4,7 +4,7 @@
   border: none;
   position: fixed;
   bottom: 20px;
-  right: 50px;
+  right: 100px;
   transition: transform 0.3s ease;
   width: 60px;
 }
