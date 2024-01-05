@@ -19,11 +19,13 @@
   float: left;
   padding: 8px 12px;
   text-decoration: none;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  border: none; 
-  cursor: pointer; 
+  border: none;
+  cursor: pointer;
   margin: 0 4px; /* adaugă margini între butoane */
-  background: transparent; 
+  background: transparent;
 }
 
 /* Stilizare pentru butoanele active din paginare */

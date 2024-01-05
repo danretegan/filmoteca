@@ -1,9 +1,17 @@
 .modal-movie-card {
   background-color: #fff;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 87vw;
   left: 50%;
@@ -11,7 +19,11 @@
   overflow-y: scroll;
   padding: 40px 20px;
   position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   z-index: 51;
 }
@@ -22,6 +34,8 @@
 }
 
 .btn-close {
+  -webkit-transform: translate(10px, -20px);
+  -ms-transform: translate(10px, -20px);
   transform: translate(10px, -20px);
   padding: 0.5rem 0.7rem;
   background: #eee;
@@ -49,13 +63,18 @@
 }
 .left-side-content {
   height: auto;
+  display: -ms-grid;
   display: grid;
   margin: inherit;
 }
 .image-size {
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 20px;
   width: 100%;
@@ -95,10 +114,19 @@
 /* Stilizare continut modal */
 
 .modal-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   place-content: normal;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -116,14 +144,21 @@
 .btn-q-w {
   gap: 4px;
   line-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   font-size: 12px;
   line-height: 1.33;
   font-weight: 500;
   text-transform: uppercase;
   border-radius: 5px;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
   transition: 0.25s;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .btn-q {
@@ -134,12 +169,20 @@
   cursor: pointer;
   border: 1px solid #000;
   border-radius: 100px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
   transition: all 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .btn-w {
@@ -150,12 +193,20 @@
   cursor: pointer;
   border: 1px solid #000;
   border-radius: 100px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
   transition: all 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .add-queue-btn {
@@ -187,16 +238,22 @@
 .btn-q:focus {
   color: #ffffff;
   background-color: #b92f2c;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
   border: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .btn-w:hover,
 .btn-w:focus {
   color: #ffffff;
   background-color: #b92f2c;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
   border: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -204,12 +261,14 @@
   color: #ffffff;
   /* transform: scale(1.05); */
   border: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .add-queue-btn:hover {
   color: #ffffff;
   /* transform: scale(1.05); */
   border: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .modal-movie-card-close {
@@ -232,14 +291,23 @@
     width: 704px;
     max-height: 90vh;
     overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 40px;
   }
 
   .modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     /* place-content: flex-start flex-end; */
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 40px;
   }
@@ -253,6 +321,8 @@
     /* margin-bottom: 25px; */
     /* width: 475px; */
     /* margin: 0; */
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -297,6 +367,8 @@
     padding: 40px;
     width: 100%;
     max-width: 806px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
     max-height: max-content;
   }
 
@@ -312,6 +384,8 @@
 
   .right-side-content {
     text-align: -webkit-left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .left-side-content {
@@ -322,6 +396,9 @@
   /* Stilizare continut modal */
 
   .modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 40px;
   }
@@ -335,8 +412,16 @@
   .btn-q-w {
     gap: 20px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .btn-q {

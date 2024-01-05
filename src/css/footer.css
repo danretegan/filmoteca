@@ -1,4 +1,4 @@
-/* FOOTER css*/
+/* footer.css*/
 
 .footer {
   background: #f7f7f7;
@@ -6,17 +6,35 @@
 }
 
 .footer-body-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer-font-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
 }
 
@@ -49,9 +67,17 @@
   width: 100vw;
   height: 100vh;
   background: #00000033;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -63,7 +89,8 @@
   height: auto;
   position: relative;
   border-radius: 20px;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .footer-modal:hover {
@@ -72,9 +99,15 @@
 }
 
 .footer-modal-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -105,14 +138,24 @@
 .footer-font-title {
   margin-top: 2px;
   color: #000;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Roboto';
   font-weight: 500;
   line-height: clamp(12px, 14px, 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-size: clamp(0.5206rem, 0.3942rem + 0.6323vw, 0.9rem);
 }
 
@@ -124,10 +167,19 @@
 
 .footer-cards {
   gap: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-team-card {
@@ -135,8 +187,13 @@
   width: 95%;
   height: auto;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 6px;
   padding: 0;
   box-shadow: 5px 5px 14px -3px rgba(185, 47, 44, 0.67);
@@ -168,20 +225,35 @@
   height: 70px;
   border: 2px solid #b92f2c;
   border-radius: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
 .footer-member-info {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 15px;
-  align-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .footer-team-name {
@@ -206,17 +278,29 @@
 }
 
 .footer-icon-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 100px;
   border: 2px solid #b92f2c;
   padding: 14px;
   display: flex;
   gap: 6px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-right: 10px;
 }
 
@@ -242,7 +326,8 @@
 
 .footer-linkedin-icon:hover,
 .footer-github-icon:hover {
-  filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
+  -webkit-filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
+          filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
 }
 
 .footer-dark-mode {
@@ -287,7 +372,10 @@
   }
 
   .footer-font-flex {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: clamp(0.75rem, 0.5313rem + 1.0938vw, 1.4063rem);
   }
 
@@ -320,14 +408,25 @@
   }
 
   .footer-member-info {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .footer-icon-cards {
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .footer-img-size {
@@ -345,7 +444,10 @@
   }
 
   .footer-body-content {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .footer-cards {
@@ -382,13 +484,23 @@
   }
 
   .footer-member-info {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .footer-icon-cards {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .footer-img-size {

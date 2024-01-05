@@ -20,6 +20,7 @@ body.dark-mode .footer-font-size {
 
 body.dark-mode .footer-heart-icon-custom {
   /* filter: invert(1); */
+  -webkit-filter: invert(0.3) sepia(100%) saturate(3500%) hue-rotate(0);
   filter: invert(0.3) sepia(100%) saturate(3500%) hue-rotate(0);
 }
 
@@ -68,6 +69,7 @@ body.dark-mode .pagination button {
   color: #dddddd;
 }
 .dark-mode .footer-close-icon {
+  -webkit-filter: invert(1);
   filter: invert(1);
 }
 .dark-mode .footer-team-function {
@@ -85,11 +87,13 @@ body.dark-mode .pagination button {
 
 .dark-mode .footer-linkedin-icon,
 .dark-mode .footer-github-icon {
+  -webkit-filter: invert(1);
   filter: invert(1);
 }
 
 .dark-mode .footer-linkedin-icon:hover,
 .dark-mode .footer-github-icon:hover {
+  -webkit-filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
   filter: invert(0.3) sepia(150%) saturate(5500%) hue-rotate(30deg);
 }
 

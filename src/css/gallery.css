@@ -1,6 +1,7 @@
 /* Stilurile pentru card */
 .movie-card {
   border-radius: 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: auto;
   margin: 0 auto;
@@ -35,23 +36,37 @@
   border-radius: 20px;
   cursor: pointer;
   height: auto; /* Asigură că imaginea ocupă întreaga înălțime a cardului */
+  -o-object-fit: cover;
   object-fit: cover; /* Redimensionează imaginea astfel încât să acopere întregul container, păstrând proporțiile */
   width: 100%; /* Asigură că imaginea ocupă întreaga lățime a cardului */
+  -webkit-box-shadow: 0 4px 8px 0 rgba(185, 47, 44, 0.2),
+    0 6px 20px 0 rgba(185, 47, 44, 0.19);
   box-shadow: 0 4px 8px 0 rgba(185, 47, 44, 0.2),
     0 6px 20px 0 rgba(185, 47, 44, 0.19);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .movie-card .movie-image:hover,
 .movie-card .movie-image:focus {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
   transform: scale(1.03);
 }
 
 @media screen and (min-width: 424px) {
   .movie-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 20px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 20px;
   }
