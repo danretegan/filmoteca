@@ -12,6 +12,7 @@ import GALLERY from './js/gallery.js';
 import PAGINATION from './js/pagination.js';
 import PAGINATIONSEARCH from './js/pagination-search.js';
 import SCROLLBUTTON from './js/scroll-button.js';
+import MARKUPMODAL from './js/markup-modal.js';
 import MODAL from './js/modal.js';
 import MYLIBRARY from './js/my-library.js';
 import FOOTER from './js/footer.js';

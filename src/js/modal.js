@@ -1,19 +1,20 @@
-import axios from 'axios';
-import apiMovie from './api-movie.js';
-import axios from 'axios';
-import apiMovie from './api-movie.js';
+// modal.js
 
-// Declarațiile pentru butoane
+import axios from 'axios';
+import apiMovie from './api-movie.js';
+import { modalContentMarkup } from './markup-modal.js';
+
+// Declarațiile pentru butoane:
 let addToQueueButton;
 let addToWatchedButton;
 
-// Funcția de adăugare a movie ID-ului în local storage
+// Funcția de adăugare a movie ID-ului în local storage:
 function toggleLocalStorage(movieId, key) {
   const storedIds = localStorage.getItem(key)
     ? JSON.parse(localStorage.getItem(key))
     : [];
 
-  // Verifică dacă ID-ul filmului este în storage
+  // Verifică dacă ID-ul filmului este în storage:
   const index = storedIds.indexOf(movieId);
   if (index !== -1) {
     // Dacă este, îl elimină
@@ -54,7 +55,7 @@ function updateButtonText(button, movieId, key) {
   }
 }
 
-// Funcția de deschidere a modalului
+// Funcția de deschidere a modalului:
 export async function openModal(movieId) {
   const modal = document.querySelector('.modal-movie-card');
   const overlay = document.querySelector('.overlay');
@@ -90,62 +91,15 @@ export async function openModal(movieId) {
 
     const movieDetails = response.data;
 
-    console.log(movieDetails);
-
     // Adaugarea continutului modalului
     const modalContent = document.querySelector('.modal-content');
-    modalContent.innerHTML = `
-      <div class="left-side-content">
-        <div class="image-size">
-          <img src="${getMovieImageUrl(movieDetails.poster_path)}" alt="${
-      movieDetails.title
-    }" class="modal-movie-poster">
-        </div>
-      </div>
-      <div class="right-side-content">
-        <div class="modal-content-details">
-            <p class="modal-movie-tille">Title:${movieDetails.title}</p>
-            <p class="modal-movie-averageVote">Vote Average: ${
-              movieDetails.vote_average
-            }</p>
-            <p class="modal-movie-voteCount">Vote count: ${
-              movieDetails.vote_count
-            }</p>
-            <p class="modal-movie-popularity">Popularity: ${
-              movieDetails.popularity
-            }</p>
-            <p class="modal-movie-originalTitle">Original title: ${
-              movieDetails.original_title
-            }</p>
-            <p class="modal-movie-RealeseDate">Release Date: ${
-              movieDetails.release_date
-            }</p>
-            <p class="modal-movie-overview">Overview: ${
-              movieDetails.overview
-            }</p>
-            <p class="modal-movie-genders">Genres: ${movieDetails.genres
-              .map(genre => genre.name)
-              .join(', ')}</p>
-              <div class="btn-q-w">
-                 <div class="btn-w">
-                     <button class="add-watched-btn"></button>
-                 </div>
+    modalContent.innerHTML = ''; // Curăță conținutul existent
 
-                  <div class="btn-q">
-                     <button class="add-queue-btn"></button>
-                 </div>
+    // Apelarea funcției `modalContentMarkup` pentru a obține HTML-ul
+    const markup = modalContentMarkup(movieDetails);
 
-               
-              </div>
-          </div>
-      </div>
-      
-    `;
-    function getMovieImageUrl(posterPath) {
-      return posterPath
-        ? `https://image.tmdb.org/t/p/w500/${posterPath}`
-        : 'https://i.imgur.com/p3MsT9t.jpg'; // default image
-    }
+    // Adăugarea HTML-ului generat în modalContent
+    modalContent.insertAdjacentHTML('beforeend', markup);
 
     // Deschiderea modalului
     openModal();
