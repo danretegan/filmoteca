@@ -7,7 +7,6 @@
   right: 20px;
   transition: transform 0.3s ease;
   width: 60px;
-  z-index: 7;
 }
 
 .fixedbutton img {
