@@ -4,28 +4,39 @@
   border: none;
   position: fixed;
   bottom: 20px;
-  right: 100px;
+  right: 30px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   width: 60px;
 }
 
 .fixedbutton img {
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
   width: 100%;
 }
 
 .fixedbutton:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
 .fixedbutton:focus {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
 /* Media query pentru dispozitive cu ecrane Retina */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
   /* Modifică dimensiunea imaginii pentru ecranele Retina */
   .fixedbutton img {
     width: 60px; /* Dimensiunea pentru Retina */
