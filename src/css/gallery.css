@@ -1,8 +1,6 @@
 /* Stilurile pentru card */
 .movie-card {
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   height: auto;
   margin: 0 auto;
   padding-left: 20px;
@@ -12,7 +10,7 @@
 }
 
 /* Stilurile pentru titlu */
-.movie-title {
+.movie-card .movie-title {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
@@ -29,6 +27,13 @@
   font-weight: 500;
   line-height: 1.3em;
   margin: 0;
+}
+
+.movie-card .vote {
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #b92f2c;
+  color: white;
 }
 
 /* Stilurile pentru imaginea din card */

@@ -44,12 +44,22 @@ export function createMovieCard(movie, genres) {
 
   // Verifică dacă există genuri disponibile; în caz contrar, afișează un mesaj alternativ
   const genresString = movieGenres.length > 0 ? movieGenres.join(' ') : 'N/A';
-  movieInfo.textContent = `${genresString} | ${releaseYear} `;
+
+  const voteAverage = movie.vote_average || 0;
+  const formattedVoteAverage = voteAverage.toFixed(1); // Afiseaza votul cu o singura zecimala
+
+  // Creăm un element <span> pentru a încadra valoarea votului mediu
+  const voteAverageSpan = document.createElement('span');
+  voteAverageSpan.textContent = formattedVoteAverage;
+  voteAverageSpan.classList.add('vote');
+
+  movieInfo.textContent = `${genresString} | ${releaseYear} | `;
   movieInfo.classList.add('movie-info');
 
   movieCard.appendChild(movieImage);
   movieCard.appendChild(movieTitle);
   movieCard.appendChild(movieInfo);
+  movieInfo.appendChild(voteAverageSpan);
 
   return movieCard;
 }
