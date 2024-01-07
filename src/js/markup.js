@@ -8,15 +8,16 @@ export function createMovieCard(movie, genres) {
   movieCard.setAttribute('modal-movie-card-open', 'true');
 
   const movieImage = document.createElement('img');
-  // Verificăm dacă există un poster_path valid înainte de a crea URL-ul imaginii
-  if (movie.poster_path) {
-    const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+  // If a poster exists, use the poster image:
+  const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+
+  try {
     movieImage.src = imageUrl;
-  } else {
-    // Dacă nu există poster_path, folosim o imagine implicită
+  } catch (error) {
+    // If no poster exists, use a default image:
     movieImage.src = 'https://i.imgur.com/p3MsT9t.jpg';
     movieImage.alt = 'Image not available';
-    console.info('No poster available');
+    console.error('Failed to load image:', error);
   }
 
   movieImage.alt = movie.title;
