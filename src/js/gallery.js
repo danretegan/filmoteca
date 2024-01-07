@@ -1,3 +1,5 @@
+// gallery.js
+
 import axios from 'axios';
 import apiMovie from './api-movie.js';
 import { getMovieGenres } from './api-genres.js';

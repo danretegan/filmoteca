@@ -1,12 +1,16 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Stilurile pentru card */
 .movie-card {
   border-radius: 20px;
-  height: auto;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-  width: 100%;
 }
 
 /* Stilurile pentru titlu */
@@ -40,10 +44,6 @@
 .movie-card .movie-image {
   border-radius: 20px;
   cursor: pointer;
-  height: auto; /* Asigură că imaginea ocupă întreaga înălțime a cardului */
-  -o-object-fit: cover;
-  object-fit: cover; /* Redimensionează imaginea astfel încât să acopere întregul container, păstrând proporțiile */
-  width: 100%; /* Asigură că imaginea ocupă întreaga lățime a cardului */
   -webkit-box-shadow: 0 4px 8px 0 rgba(185, 47, 44, 0.2),
     0 6px 20px 0 rgba(185, 47, 44, 0.19);
   box-shadow: 0 4px 8px 0 rgba(185, 47, 44, 0.2),

@@ -1,3 +1,5 @@
+// markup.js
+
 // Funcție pentru generarea sablonului unui card de film:
 export function createMovieCard(movie, genres) {
   const movieCard = document.createElement('div');
