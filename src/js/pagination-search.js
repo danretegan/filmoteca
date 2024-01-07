@@ -1,8 +1,11 @@
-// pagination.js
+// pagination-search.js
+
+import axios from 'axios';
+import apiSearch from './api-search.js';
 
 const TOTAL_PAGES = 500;
 
-function createPaginationButtonsSearch(
+async function createPaginationButtonsSearch(
   currentPage,
   updatePaginationAndDisplaySearch
 ) {
@@ -41,6 +44,20 @@ function createPaginationButtonsSearch(
     }
   });
   pagination.appendChild(nextButton);
+
+  // Adaugă apelul către API și afișarea rezultatelor în consolă
+  const searchUrl = `${apiSearch.url}&query=your_query_here&page=${currentPage}`;
+
+  try {
+    const response = await axios.get(searchUrl, apiSearch);
+    console.log('response from API:', response);
+    console.log('page:', response.data.page);
+    console.log('first 20 results:', response.data.results);
+    console.log('total_pages:', response.data.total_pages);
+    console.log('total_results:', response.data.total_results);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
 export { createPaginationButtonsSearch };

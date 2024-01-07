@@ -78,11 +78,11 @@ searchForm.addEventListener('submit', async function (event) {
     const genres = await getMovieGenres();
     const response = await axios.get(searchUrl, apiSearch);
     const movies = response.data.results;
-    console.log('response from API:', response);
-    console.log('page:', response.data.page);
-    console.log('first 20 results:', response.data.results);
-    console.log('total_pages:', response.data.total_pages);
-    console.log('total_results:', response.data.total_results);
+    // console.log('response from API:', response);
+    // console.log('page:', response.data.page);
+    // console.log('first 20 results:', response.data.results);
+    // console.log('total_pages:', response.data.total_pages);
+    // console.log('total_results:', response.data.total_results);
 
     // Eliminarea event listener-ilor de pe cardurile vechi înainte de adăugarea noilor carduri:
     const movieCards = document.querySelectorAll('.movie-card');
@@ -110,43 +110,7 @@ searchForm.addEventListener('submit', async function (event) {
     resultContainer.innerHTML = '';
 
     movies.forEach(async movie => {
-      const movieCard = document.createElement('div');
-      movieCard.classList.add('movie-card-search');
-
-      let movieImage = document.createElement('img');
-      // Check if the movie has a poster before creating the card
-      if (movie.poster_path) {
-        // If a poster exists, use the poster image
-        const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-        movieImage.src = imageUrl;
-      } else {
-        // If no poster exists, use a default image
-        movieImage.src = 'https://i.imgur.com/p3MsT9t.jpg';
-      }
-      movieImage.alt = movie.title;
-      movieImage.classList.add('movie-image');
-      movieImage.tabIndex = 0;
-
-      const movieTitle = document.createElement('h3');
-      movieTitle.textContent = movie.title;
-      movieTitle.classList.add('movie-title');
-
-      const movieInfo = document.createElement('p');
-      const releaseYear =
-        (movie.release_date && movie.release_date.split('-')[0]) || 'undefined';
-
-      const movieGenres = movie.genre_ids.map(genreId => {
-        const foundGenre = genres.find(genre => genre.id === genreId);
-        return foundGenre ? foundGenre.name : '';
-      });
-
-      const genresString = movieGenres.join(' ');
-      movieInfo.textContent = `${genresString} | ${releaseYear}`;
-      movieInfo.classList.add('movie-info');
-
-      movieCard.appendChild(movieImage);
-      movieCard.appendChild(movieTitle);
-      movieCard.appendChild(movieInfo);
+      const movieCard = createMovieCard(movie, genres);
       resultContainer.appendChild(movieCard);
       attachCardClickListener(movieCard, movie.id);
     });
@@ -175,6 +139,7 @@ paginationContainer.addEventListener('click', function (event) {
     }
   }
 });
+
 async function updatePaginationAndDisplaySearch(newPage) {
   // Update the current page
   currentPage = newPage;
@@ -208,43 +173,9 @@ async function updatePaginationAndDisplaySearch(newPage) {
     resultContainer.innerHTML = '';
 
     movies.forEach(async movie => {
-      // Check if the movie has a poster before creating the card
-      if (movie.poster_path || !movie.poster_path) {
-        const movieCard = document.createElement('div');
-        movieCard.classList.add('movie-card-search');
-
-        const movieImage = document.createElement('img');
-        const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-        movieImage.src = imageUrl;
-        movieImage.alt = movie.title;
-        movieImage.classList.add('movie-image');
-        movieImage.tabIndex = 0;
-
-        const movieTitle = document.createElement('h3');
-        movieTitle.textContent = movie.title;
-        movieTitle.classList.add('movie-title');
-
-        const movieInfo = document.createElement('p');
-        const releaseYear =
-          (movie.release_date && movie.release_date.split('-')[0]) ||
-          'undefined';
-
-        const movieGenres = movie.genre_ids.map(genreId => {
-          const foundGenre = genres.find(genre => genre.id === genreId);
-          return foundGenre ? foundGenre.name : '';
-        });
-
-        const genresString = movieGenres.join(' ');
-        movieInfo.textContent = `${genresString} | ${releaseYear}`;
-        movieInfo.classList.add('movie-info');
-
-        movieCard.appendChild(movieImage);
-        movieCard.appendChild(movieTitle);
-        movieCard.appendChild(movieInfo);
-
-        resultContainer.appendChild(movieCard);
-        attachCardClickListener(movieCard, movie.id);
-      }
+      const movieCard = createMovieCard(movie, genres);
+      resultContainer.appendChild(movieCard);
+      attachCardClickListener(movieCard, movie.id);
     });
 
     // Hide the loader after displaying the results for the new page
