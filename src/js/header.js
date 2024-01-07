@@ -17,9 +17,6 @@ const loaderContainer = document.querySelector('.loader-container');
 const paginationContainer = document.querySelector('.pagination');
 
 let currentPage = 1;
-const TOTAL_PAGES = 500; // Numărul total maxim de pagini disponibile.
-const ITEMS_PER_PAGE = 20; // Numărul de elemente pe pagină.
-const MAX_PAGES_DISPLAYED = 5; // Numărul maxim de pagini afișate în paginare
 
 // Funcția pentru atașarea event listener-ului la un card de film:
 function attachCardClickListener(movieCard, movieId) {
@@ -95,7 +92,7 @@ searchForm.addEventListener('submit', async function (event) {
     if (movies.length === 0) {
       showError('No results found.');
       paginationContainer.style.display = 'none';
-    toggleLoader(false);
+      toggleLoader(false);
       return;
     }
 
@@ -105,43 +102,7 @@ searchForm.addEventListener('submit', async function (event) {
     resultContainer.innerHTML = '';
 
     movies.forEach(async movie => {
-      const movieCard = document.createElement('div');
-      movieCard.classList.add('movie-card-search');
-
-      let movieImage = document.createElement('img');
-      // Check if the movie has a poster before creating the card
-      if (movie.poster_path) {
-        // If a poster exists, use the poster image
-        const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-        movieImage.src = imageUrl;
-      } else {
-        // If no poster exists, use a default image
-        movieImage.src = 'https://i.imgur.com/p3MsT9t.jpg';
-      }
-      movieImage.alt = movie.title;
-      movieImage.classList.add('movie-image');
-      movieImage.tabIndex = 0;
-
-      const movieTitle = document.createElement('h3');
-      movieTitle.textContent = movie.title;
-      movieTitle.classList.add('movie-title');
-
-      const movieInfo = document.createElement('p');
-      const releaseYear =
-        (movie.release_date && movie.release_date.split('-')[0]) || 'undefined';
-
-      const movieGenres = movie.genre_ids.map(genreId => {
-        const foundGenre = genres.find(genre => genre.id === genreId);
-        return foundGenre ? foundGenre.name : '';
-      });
-
-      const genresString = movieGenres.join(' ');
-      movieInfo.textContent = `${genresString} | ${releaseYear}`;
-      movieInfo.classList.add('movie-info');
-
-      movieCard.appendChild(movieImage);
-      movieCard.appendChild(movieTitle);
-      movieCard.appendChild(movieInfo);
+      const movieCard = createMovieCard(movie, genres);
       resultContainer.appendChild(movieCard);
       attachCardClickListener(movieCard, movie.id);
     });
@@ -153,7 +114,6 @@ searchForm.addEventListener('submit', async function (event) {
     toggleLoader(false);
   }
 });
-
 
 paginationContainer.addEventListener('click', function (event) {
   const target = event.target;
@@ -193,64 +153,6 @@ async function updatePaginationAndDisplaySearch(newPage) {
     // Hide Gallery and show Search Results when movies are available
     galleryContainer.style.display = movies.length > 0 ? 'none' : 'block';
     resultContainer.style.display = movies.length > 0 ? 'flex' : 'none';
-
-    // if (movies.length === 0) {
-    //   showError('No results found.');
-    //   hideLoaderAfterSearch();
-    //   return;
-    // }
-
-    // Clear any existing results
-    resultContainer.innerHTML = '';
-
-    movies.forEach(async movie => {
-      // Check if the movie has a poster before creating the card
-      if (movie.poster_path || !movie.poster_path) {
-        const movieCard = document.createElement('div');
-        movieCard.classList.add('movie-card-search');
-
-        const movieImage = document.createElement('img');
-        const imageUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-        movieImage.src = imageUrl;
-        movieImage.alt = movie.title;
-        movieImage.classList.add('movie-image');
-        movieImage.tabIndex = 0;
-
-        const movieTitle = document.createElement('h3');
-        movieTitle.textContent = movie.title;
-        movieTitle.classList.add('movie-title');
-
-        const movieInfo = document.createElement('p');
-        const releaseYear =
-          (movie.release_date && movie.release_date.split('-')[0]) ||
-          'undefined';
-
-        const movieGenres = movie.genre_ids.map(genreId => {
-          const foundGenre = genres.find(genre => genre.id === genreId);
-          return foundGenre ? foundGenre.name : '';
-        });
-
-        const genresString = movieGenres.join(' ');
-        movieInfo.textContent = `${genresString} | ${releaseYear}`;
-        movieInfo.classList.add('movie-info');
-
-        movieCard.appendChild(movieImage);
-        movieCard.appendChild(movieTitle);
-        movieCard.appendChild(movieInfo);
-
-        resultContainer.appendChild(movieCard);
-        attachCardClickListener(movieCard, movie.id);
-      }
-    });
-
-    // Hide the loader after displaying the results for the new page
-    hideLoaderAfterSearch();
-
-    // Update pagination UI based on the new current page and total pages
-    // createPaginationButtonsSearch(
-    //   currentPage,
-    //   updatePaginationAndDisplaySearch
-    // );
   } catch (error) {
     console.error('Error:', error);
     showError('An error occurred while fetching data.');
