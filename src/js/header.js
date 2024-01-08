@@ -78,11 +78,11 @@ searchForm.addEventListener('submit', async function (event) {
     const genres = await getMovieGenres();
     const response = await axios.get(searchUrl, apiSearch);
     const movies = response.data.results;
-    // console.log('response from API:', response);
-    // console.log('page:', response.data.page);
-    // console.log('first 20 results:', response.data.results);
-    // console.log('total_pages:', response.data.total_pages);
-    // console.log('total_results:', response.data.total_results);
+    console.log('response from API:', response);
+    console.log('page:', response.data.page);
+    console.log('first 20 results:', response.data.results);
+    console.log('total_pages:', response.data.total_pages);
+    console.log('total_results:', response.data.total_results);
 
     // Eliminarea event listener-ilor de pe cardurile vechi înainte de adăugarea noilor carduri:
     const movieCards = document.querySelectorAll('.movie-card');

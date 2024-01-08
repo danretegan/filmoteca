@@ -54,6 +54,7 @@
 }
 
 .right-side-content {
+  align-self: center;
   color: #f57676;
   font-family: 'Roboto';
   font-size: 78%;
@@ -80,8 +81,8 @@
   width: 100%;
 }
 .modal-movie-poster {
-  width: 240px;
-  height: 340px;
+  /* width: 240px; */
+  /* height: 340px; */
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -242,7 +243,6 @@
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   border: none;
- 
 }
 .btn-w:hover,
 .btn-w:focus {
@@ -252,20 +252,17 @@
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   border: none;
- 
 }
 
 .add-watched-btn:hover {
   color: #ffffff;
   /* transform: scale(1.05); */
   border: none;
- 
 }
 .add-queue-btn:hover {
   color: #ffffff;
   /* transform: scale(1.05); */
   border: none;
- 
 }
 .modal-movie-card-close {
   cursor: pointer;
@@ -284,7 +281,7 @@
 
 @media screen and (min-width: 768px) {
   .modal-movie-card {
-    width: 704px;
+    /* width: 704px; */
     max-height: 90vh;
     overflow: hidden;
     height: -webkit-fit-content;
@@ -309,8 +306,8 @@
   }
 
   .modal-movie-poster {
-    width: 264px;
-    height: 373.551px;
+    /* width: 264px; */
+    /* height: 373.551px; */
   }
 
   .left-side-content {
@@ -353,8 +350,8 @@
 
 @media screen and (min-width: 1280px) {
   .modal {
-    width: 806px;
-    height: 558px;
+    /* width: 806px; */
+    /* height: 558px; */
   }
 
   .modal-movie-card {
@@ -362,7 +359,7 @@
     left: 50%;
     padding: 40px;
     width: 100%;
-    max-width: 806px;
+    /* max-width: 806px; */
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
