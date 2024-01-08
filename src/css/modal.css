@@ -281,7 +281,7 @@
 
 @media screen and (min-width: 768px) {
   .modal-movie-card {
-    /* width: 704px; */
+    width: 704px;
     max-height: 90vh;
     overflow: hidden;
     height: -webkit-fit-content;
@@ -350,7 +350,7 @@
 
 @media screen and (min-width: 1280px) {
   .modal {
-    /* width: 806px; */
+    /* max-width: 806px; */
     /* height: 558px; */
   }
 
@@ -358,8 +358,7 @@
     top: 50%;
     left: 50%;
     padding: 40px;
-    width: 100%;
-    /* max-width: 806px; */
+    max-width: 806px;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
